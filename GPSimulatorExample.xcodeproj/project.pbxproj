@@ -12,6 +12,10 @@
 		AF516D771E715BC100B043A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF516D751E715BC100B043A1 /* Main.storyboard */; };
 		AF516D791E715BC100B043A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF516D781E715BC100B043A1 /* Assets.xcassets */; };
 		AF516D7C1E715BC100B043A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF516D7A1E715BC100B043A1 /* LaunchScreen.storyboard */; };
+		AF516D851E715E0300B043A1 /* GPSimulatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF516D841E715E0300B043A1 /* GPSimulatorButton.swift */; };
+		AF516D871E715EBD00B043A1 /* CLLocationManager-.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF516D861E715EBD00B043A1 /* CLLocationManager-.swift */; };
+		AF516D891E716C0A00B043A1 /* GPSimulator.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF516D881E716C0A00B043A1 /* GPSimulator.xcassets */; };
+		AF516D8C1E7254B400B043A1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF516D8B1E7254B400B043A1 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		AF516D781E715BC100B043A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF516D7B1E715BC100B043A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF516D7D1E715BC100B043A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF516D841E715E0300B043A1 /* GPSimulatorButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSimulatorButton.swift; sourceTree = "<group>"; };
+		AF516D861E715EBD00B043A1 /* CLLocationManager-.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationManager-.swift"; sourceTree = "<group>"; };
+		AF516D881E716C0A00B043A1 /* GPSimulator.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GPSimulator.xcassets; sourceTree = "<group>"; };
+		AF516D8B1E7254B400B043A1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF516D8C1E7254B400B043A1 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +47,10 @@
 		AF516D651E715BC100B043A1 = {
 			isa = PBXGroup;
 			children = (
+				AF516D831E715DD400B043A1 /* GPSimulator */,
 				AF516D701E715BC100B043A1 /* GPSimulatorExample */,
 				AF516D6F1E715BC100B043A1 /* Products */,
+				AF516D8A1E7254B400B043A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +73,24 @@
 				AF516D7D1E715BC100B043A1 /* Info.plist */,
 			);
 			path = GPSimulatorExample;
+			sourceTree = "<group>";
+		};
+		AF516D831E715DD400B043A1 /* GPSimulator */ = {
+			isa = PBXGroup;
+			children = (
+				AF516D841E715E0300B043A1 /* GPSimulatorButton.swift */,
+				AF516D861E715EBD00B043A1 /* CLLocationManager-.swift */,
+				AF516D881E716C0A00B043A1 /* GPSimulator.xcassets */,
+			);
+			path = GPSimulator;
+			sourceTree = "<group>";
+		};
+		AF516D8A1E7254B400B043A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF516D8B1E7254B400B043A1 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +127,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = ZRU74Q6CGE;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -127,6 +161,7 @@
 				AF516D7C1E715BC100B043A1 /* LaunchScreen.storyboard in Resources */,
 				AF516D791E715BC100B043A1 /* Assets.xcassets in Resources */,
 				AF516D771E715BC100B043A1 /* Main.storyboard in Resources */,
+				AF516D891E716C0A00B043A1 /* GPSimulator.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +172,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF516D851E715E0300B043A1 /* GPSimulatorButton.swift in Sources */,
+				AF516D871E715EBD00B043A1 /* CLLocationManager-.swift in Sources */,
 				AF516D741E715BC100B043A1 /* ViewController.swift in Sources */,
 				AF516D721E715BC100B043A1 /* AppDelegate.swift in Sources */,
 			);
