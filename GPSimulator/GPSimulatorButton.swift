@@ -12,6 +12,7 @@ import CoreLocation
 class GPSimulatorButton: UIButton {
     let locationManager = CLLocationManager()
     
+    
     init() {
         super.init(frame: CGRect.zero)
         initialize()
